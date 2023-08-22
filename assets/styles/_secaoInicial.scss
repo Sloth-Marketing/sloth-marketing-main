@@ -1,0 +1,116 @@
+.secao-inicial {
+    width: 100%;
+    max-width: 1400px;
+    height: 80vh;
+    margin: 0 auto;
+    margin-top: 75px;
+    @include Flex(center, center);
+}
+
+.texto-inicial {
+    padding: 60px;
+    @include Flex(center, flex-start); 
+    flex-direction: column;
+    gap: 10px;
+
+    h3 {
+        text-align: left;
+        font-size: 25px;
+        color: $amarelo-escuro;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    .sub-texto {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    a {
+        margin-top: 10px;
+        color: $branco;
+        padding: 10px 35px;
+        background-color: $amarelo-claro;
+        border-radius: 20px;
+        transition: all .2s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+.img-secao-inicial { 
+    width: 55%;
+    display: block;
+    max-width: 700px;
+    align-self: flex-end;
+    padding: 60px 60px 0 60px;
+}
+
+@media screen and (max-width: 992px) {
+    .secao-inicial {
+        width: 100%;
+        height: auto;
+        @include Flexcolumn(space-between, center);
+        
+        .texto-inicial {
+            width: 100%;
+            padding-top: 50px;
+            gap: 30px;
+
+            p {
+                margin: 0 auto;
+                width: 100%;
+                font-size: 25px;
+            }
+
+            .sub-texto {
+                font-size: 16px;
+                line-height: 30px;
+            }
+
+            a {
+                margin: 0 auto;
+            }
+        }
+    }
+    .img-secao-inicial {
+        margin: 0 auto;    
+        width: 500px;
+        justify-self: flex-end;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .secao-inicial {
+        .texto-inicial {
+            padding: 30px 0;
+            
+            h3 {
+                text-align: left;
+                margin: 0 auto;
+                width: 90%;
+                font-size: 20px;
+            }
+            p {
+                width: 90%;
+                font-size: 25px;
+            }
+        }
+    }
+    .img-secao-inicial {
+        margin: 0 auto;    
+        width: 400px;
+        justify-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .img-secao-inicial {
+        margin: 0 auto;    
+        width: 300px;
+        justify-self: flex-end;
+    }
+}

@@ -1,0 +1,71 @@
+.secao-servicos {
+    background-color: $amarelo-claro;
+    @include Flexcolumn(center, center);
+    padding: 100px 20px;
+
+    h2 {
+        margin-bottom: 60px;
+        color: $branco;
+        text-align: center
+    }
+}
+
+.servicos {
+    @include Flex(space-around, center);
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    gap: 50px;
+
+    .servico {
+        width: 250px;   
+        height: 250px;
+        background-color: $branco;
+        border-radius: 20px;
+        box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
+        @include Flexcolumn(center, center);
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 75px;
+        }
+
+        h4 {
+            padding: 10px 0px;
+            color: $amarelo-escuro;
+        }
+
+        p {
+            padding: 0px 10px;
+            text-align: center;
+            color: $preto;
+        }
+    }
+}
+
+.veja-mais {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1210px) {
+    .secao-servicos{
+        padding: 100px 170px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .secao-servicos{
+        padding: 100px 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .secao-servicos{
+        padding: 50px 20px;
+    }
+
+    
+}

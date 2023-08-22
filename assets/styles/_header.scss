@@ -1,0 +1,107 @@
+header {
+    @include Flex(space-around, center);
+    width: 100%;
+    height: 75px;
+    background-color: $amarelo-claro;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.5);
+    z-index: 100;
+
+    .header-center {
+        width: 100%;
+        @include Flex(space-between, center);
+        max-width: 1400px;
+        padding-left: 30px;
+    }
+
+    img {
+        width: 120px;
+        padding-left: 30px;
+        display: block;
+        transition: all .2s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .btn-menu-header {
+        background-color: transparent;
+        border: none;
+        font-size: 36px;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+.nav-menu ul {
+    @include Flex(space-around, center);
+    gap: 40px;
+    padding-right: 60px;
+
+    li {
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    a {
+        color: $marrom;
+    }
+}
+
+@media screen and (max-width: 992px){
+    header {
+        padding: 0 60px;
+        .header-center {
+            padding: 0;
+
+            img {
+                padding: 0;
+                width: 100px;
+            }
+        }
+
+        .btn-menu-header {
+            display: block;
+        }
+
+        .nav-menu ul {
+            position: absolute;
+            top: 75px;
+            background-color: $amarelo-claro;
+            width: 100%;
+            left: 0;
+            @include Flexcolumn(center, center);
+            gap: 15px;
+            // box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.5);
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            padding-right: 0px;
+        }
+    
+        .ativar-menu {
+            height: 200px !important;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0;
+        .header-center {
+            width: 90%;
+
+            img {
+                content: url('../img/sloth-logo-solo.png') !important;
+                width: 50px;
+            }
+        }
+    }
+}
+

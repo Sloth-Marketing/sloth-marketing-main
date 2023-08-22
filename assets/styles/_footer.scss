@@ -1,0 +1,158 @@
+footer {
+    width: 100%;
+    padding: 70px 0;
+    margin: 0 auto;
+    background-color: $amarelo-claro;
+    
+    p {
+        color: $branco
+    }
+
+    a {
+        color: $branco
+    }
+
+    address {
+        color: $branco
+    }
+
+    i {
+        color: $branco;
+    }
+}
+
+.secao-footer {
+    @include Flex(space-between, flex-start);
+    padding: 0 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .secao-logo {
+        @include Flexcolumn(flex-start, flex-start);
+        gap: 20px;
+        img {
+            width: 75px;
+        }
+    }
+}
+
+.secao {
+    @include Flexcolumn(space-between, flex-start);
+    gap: 10px;
+    width: 20%;
+
+    h3 {
+        color: $branco;
+        margin-bottom: 20px;
+        font-weight: 500
+    }
+}
+
+.secao-sobre-nos {
+    padding-left: 70px;
+}
+
+
+@media screen and (max-width: 992px) {
+    footer {
+        .secao-footer {
+            .secao-sobre-nos {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// footer {
+//     width: 100%;
+//     height: 50vh;
+//     margin: 0 auto;
+//     padding-top: 60px;
+//     background-color: $amarelo-claro;
+    
+// }
+
+// .secao-footer {
+//     @include Flex(center, flex-start);
+//     gap: 10px;
+
+//     .secao {
+//         width: 20%;
+//         padding: 0px 10px;
+//         @include Flexcolumn(center, flex-start);
+//         h3 {
+//             font-weight: 400;
+//             // align-self: center;
+//             color: $branco;
+//             text-align: center;
+//             margin-bottom: 10px;
+//         }
+        
+//         a {
+//             font-size: 14px;
+//             text-align: left;
+//             color: $branco;
+//             line-height: 30px;
+//         }
+//         p {
+//             margin-bottom: 20px;
+//             font-size: 14px;
+//             text-align: left;
+//             color: $branco;
+//             line-height: 30px;
+//         }
+
+//         i {
+//             margin-top: 20px;
+//             font-size: 20px;
+//             margin-right: 20px;
+//             color: $branco;
+//             line-height: 30px;
+//         }
+        
+//         address {
+//             margin-top: 20px;
+//             font-size: 14px;
+//             text-align: left;
+//             color: $branco;
+//             line-height: 30px;
+//         }
+//     }
+    
+//     form {
+//         width: 100%;
+//         @include Flexcolumn(space-around, center);
+//         gap: 8px;
+        
+//         input {
+//             font-size: 11px;
+//             width: 100%;
+//             padding: 5px;
+//             border: none;
+//             border-radius: 15px;
+//         }
+        
+//         button {
+//             width: 100%;
+//             margin: 0 auto;
+//             padding: 5px 20px;
+//             font-size: 10px;
+//             border: 1px solid $marrom;
+//             border-radius: 20px;
+//             background-color: $amarelo-escuro;
+//             color: $branco;
+//             cursor: pointer;
+//         }
+//     }
+// }

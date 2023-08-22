@@ -1,0 +1,74 @@
+.secao-calltoAction {
+    width: 100%;
+    @include Flex(space-around, center);
+    background-color: $cinza;
+}
+
+.img-toAction {
+    width: 50%;
+
+    img {
+        display: block;
+        width: 410px;
+        height: 100%;
+    }
+}
+
+.txt-toAction {
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    @include Flexcolumn(space-around, flex-start);
+    gap: 20px;
+
+    h2 {
+        color: $marrom;
+    }
+
+    p {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: $preto;
+    }
+
+    a {
+        color: $branco;
+        padding: 10px 30px;
+        background-color: $amarelo-claro;
+        border-radius: 20px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .secao-calltoAction {
+        background-color: #fbbd05ce;
+        .img-toAction {
+            width: 100%;
+            
+            img {
+                width: 100%;
+                max-height: 50vh;
+                object-fit: cover;
+                opacity: 0.3;
+            }
+        }
+
+        .txt-toAction {
+            position: absolute;
+            gap: 40;
+            height: auto;
+
+            .btn-calltoaction {
+                background-color: $branco;
+                color: $amarelo-escuro;
+            }
+        }
+    }
+}
